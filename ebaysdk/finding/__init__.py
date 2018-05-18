@@ -291,7 +291,7 @@ class Connection(BaseConnection):
                 "request data is not of type dict", self.response)
 
         epp = self._request_dict.get(
-            'paginationInput', {}).get('enteriesPerPage', None)
+            'paginationInput', {}).get('entriesPerPage', None)
         num = int(self.response.reply.paginationOutput.pageNumber)
 
         if num >= int(self.response.reply.paginationOutput.totalPages):
